@@ -1,7 +1,7 @@
 # museum-practice
 This webapp allows users to display 10 random artworks from the desired department from the Metropolitan [Museum of Art Collection API](https://metmuseum.github.io/) and display these images on a webpage.
 ## Getting Started
-To get started, you need to have [node.js installed](https://nodejs.org/en/). You can download this repo by cloning it. You can run the following in the command line:
+To get started, you need to have [node.js installed](https://nodejs.org/en/).After you have node.js, you can download this repo by cloning it. You can run the following in the command line:
 ```
 git clone https://github.com/anthonypiegaro/museum-practice.git
 ```
@@ -9,6 +9,7 @@ Now enter the project. Then you need to install the following dependecies:
 - express, for a framework
 - ejs, for templating
 - jest, for testing
+
 To install these dependencies, you can run the following command:
 ```
 npm install
@@ -22,6 +23,7 @@ To change the desired department, you may change the departmentName in the route
 The testing framework used for this project is jest. The tests are located in the returnImages.test.js file. These tests check that all images are valid and that all images returned are random. To run the tests, you can do either of the following two options.
 - run a specific test file
 - run all tests
+
 To run a specific test file, execute the following in the command line:
 ```
 npx jest <file-name>

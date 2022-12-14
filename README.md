@@ -19,7 +19,8 @@ The 'npm install' command should add all the dependencies and devDependencies au
 npm install --save-dev
 ```
 To run the project, you will want to select your PORT that you want your server to listen on, as well as the department you want to get your images from. To select your port, enter the server.js file and search at the top for the following line:
-``` const PORT = 3000;
+``` 
+const PORT = 3000;
 ```
 and enter the port of your choosing. It is currently preselect for port 3000.
 To change the desired department, you may change the departmentName in the route art.js file. You need to make sure that the department in a valid department. You can check this by going to the [Museum of Art Collection API](https://metmuseum.github.io/).

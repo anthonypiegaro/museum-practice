@@ -27,7 +27,7 @@ To change the desired department, you may change the departmentName in the route
 ```
 const departmentName = "Egyptian Art";
 ```
-The departmentName is preselected to Egyptiain Art. If you do change th edepartment, you need to make sure that the department is a valid department. You can check this by going to the [Museum of Art Collection API](https://metmuseum.github.io/).
+The departmentName is preselected to Egyptiain Art. If you do change the department, you need to make sure that the department is a valid department. You can check this by going to the [Museum of Art Collection API](https://metmuseum.github.io/).
 Finally, to run the server, you execute the following command:
 ```
 node server.js

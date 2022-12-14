@@ -17,9 +17,30 @@ async function getObjectIds(id) {
     return data.objectIDs;
 }
 
+function getRandom(array) {
+    return array[Math.floor(Math.random() * array.length)];
+}
+
+async function getRandomImage(ids, set) {
+    const id = getRandom(ids);
+    const response = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`);
+    const data = await response.json();
+    if (data.primaryImage == "") {
+        return getRandomImage(ids, set);
+    } else {
+        if (set.has(data.primaryImage)) {
+            return getRandomImage(ids, set)
+        } else {
+            set.add(data.primaryImage);
+            return data.primaryImage;
+        }
+    }
+}
+
 router.get("/", async (req, res) => {
     const departmentId = await getDepartmentId(departmentName);
     const ids = await getObjectIds(departmentId);
+    const image = await getRandomImage(ids, new Set());
     res.render("index", {departmentName: departmentName});
 });
 

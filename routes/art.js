@@ -37,10 +37,21 @@ async function getRandomImage(ids, set) {
     }
 }
 
+async function getImages(ids) {
+    const images = new Set();
+    const promises = [];
+    for (let i=0; i < 10; i++) {
+        promises.push(getRandomImage(ids, images));
+    }
+    await Promise.all(promises)
+    return images;
+}
+
 router.get("/", async (req, res) => {
     const departmentId = await getDepartmentId(departmentName);
     const ids = await getObjectIds(departmentId);
     const image = await getRandomImage(ids, new Set());
+    const images = await getImages(ids);
     res.render("index", {departmentName: departmentName});
 });
 

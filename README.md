@@ -23,7 +23,11 @@ To run the project, you will want to select your PORT that you want your server 
 const PORT = 3000;
 ```
 and enter the port of your choosing. It is currently preselect for port 3000.
-To change the desired department, you may change the departmentName in the route art.js file. You need to make sure that the department in a valid department. You can check this by going to the [Museum of Art Collection API](https://metmuseum.github.io/).
+To change the desired department, you may change the departmentName in the route art.js file. Once in the art.js file, look for the following near the top of the file:
+```
+const departmentName = "Egyptian Art";
+```
+The departmentName is preselected to Egyptiain Art. If you do change th edepartment, you need to make sure that the department is a valid department. You can check this by going to the [Museum of Art Collection API](https://metmuseum.github.io/).
 Finally, to run the server, you execute the following command:
 ```
 node server.js

@@ -47,11 +47,15 @@ async function getImages(ids) {
     return images;
 }
 
-router.get("/", async (req, res) => {
-    const departmentId = await getDepartmentId(departmentName);
-    const ids = await getObjectIds(departmentId);
-    const image = await getRandomImage(ids, new Set());
+async function returnImages(departmentName) {
+    const id = await getDepartmentId(departmentName);
+    const ids = await getObjectIds(id);
     const images = await getImages(ids);
+    return images;
+}
+
+router.get("/", async (req, res) => {
+    const images = await returnImages(departmentName);
     res.render("index", {departmentName: departmentName});
 });
 

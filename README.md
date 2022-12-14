@@ -1,7 +1,7 @@
 # museum-practice
 This webapp allows users to display 10 random artworks from the desired department from the Metropolitan [Museum of Art Collection API](https://metmuseum.github.io/) and display these images on a webpage.
 ## Getting Started
-To get started, you need to have [node.js installed](https://nodejs.org/en/). After you have node.js, you can download this repo by cloning it. You can run the following in the command line:
+To get started, you need to have [node.js installed](https://nodejs.org/en/). After you have node.js, you can download this repo by cloning it. To download the museum-practice, you can run the following in the command line:
 ```
 git clone https://github.com/anthonypiegaro/museum-practice.git
 ```
